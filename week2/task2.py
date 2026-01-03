@@ -12,4 +12,4 @@ output2 = print("/ , \\ ")
 output3 = print("\'\'\', \"\"\" ")
 
 # Double forward slash // and Double backward slash \\
-output4 = print(" // , \\\\")
+output4 = print(" //// , \\\\")
