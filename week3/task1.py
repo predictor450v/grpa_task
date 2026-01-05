@@ -31,10 +31,8 @@ Implement different parts of a multi-functional program based on an initial inpu
 
 Tasks
 
-Accumulation - Accumulating a final result
 
 
-reverse_sum_palindrome: Continuously read positive integers from standard input until you encounter a "-1"(not included in the output). Print only those integers for which the sum of the number and its reverse is a palindrome.
 Mapping - Applying the same operation to different items
 double_string: Continuously read lines from standard input until an empty line is encountered. Print each line repeated twice.
 odd_char: Continuously read strings from standard input until you encounter a string ending with a "."(include that string with the "." in the output). Extract characters at odd positions (starting from 1) of each line, and print the results in a single line separated by spaces.
@@ -50,6 +48,7 @@ only_odd_lines: Continuously read lines from standard input until "END"(not incl
 print("tell which task you want to perform")
 task = input("sum_until_0,total_price,only_ed_or_ing,reverse_sum_palindrome,double_string,odd_char,only_even_squares,only_odd_lines ")
 
+# Accumulation - Accumulating a final result
 # sum_until_0: Continuously read integers from standard input until you receive a zero. Print the sum of these integers.
 if task == "sum_until_0":
     total = 0
@@ -83,8 +82,22 @@ elif task == "only_ed_or_ing":
         if n.endswith("ed") or n.endswith("ing"):
             print(n)
 
+# reverse_sum_palindrome: Continuously read positive integers from standard input until you encounter a "-1"(not included in the output). Print only those integers for which the sum of the number and its reverse is a palindrome.
 
 elif task == "reverse_sum_palindrome":
+    while True:
+        a = (input("type numbers"))
+        if int(a) == -1:
+            break
+        reverse_a = a[::-1]
+        sum = int(a) + int(reverse_a)
+        if str(sum) == str(sum)[::-1]:
+            print(f"{sum} is a palimdrome and the input is {a}")
+
+        
+
+
+
     ...
 
 elif task == "double_string":
