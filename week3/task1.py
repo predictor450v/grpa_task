@@ -32,7 +32,6 @@ Implement different parts of a multi-functional program based on an initial inpu
 Tasks
 
 
-odd_char: Continuously read strings from standard input until you encounter a string ending with a "."(include that string with the "." in the output). Extract characters at odd positions (starting from 1) of each line, and print the results in a single line separated by spaces.
 Filter and Map - Applying an operation to selected items
 only_even_squares: Continuously read numbers from standard input until "NAN" is encountered. Print the square of each number only if it is even.
 Filter and Accumulate - Accumulating a result with selected items
@@ -102,8 +101,27 @@ elif task == "double_string":
             break
         print(line+line)
 
+# odd_char: Continuously read strings from standard input until you encounter a string ending with a "."(include that string with the "." in the output). Extract characters at odd positions (starting from 1) of each line, and print the results in a single line separated by spaces.
 elif task == "odd_char":
-    ...
+    while True:
+        line = input()
+        if line.endswith("."):
+            i = 1
+            result = []
+            while i <= len(line):
+                if i % 2!= 0:
+                    result.append(line[i-1])
+                i += 1
+            print(''.join(result), end=' ')
+            break
+        i = 1
+        result = []
+        while i <= len(line):
+            if i % 2!= 0:
+                result.append(line[i-1])
+            i += 1
+        print(''.join(result), end=' ')
+
 
 elif task == "only_even_squares":
     ...
