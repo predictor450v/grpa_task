@@ -6,8 +6,6 @@ If you can term the steps as do n times, do once for each item, etc. use for loo
 If you can only term the steps as do until something happens. Like when user inputs 10.
 A bit of wisdom 📖 There are maily two ways in which while loops are used in the context of taking inputs until a terminal word.
 
-Method 1
-Method 2
 # method 1
 a = input()
 while a != terminal_word: # opposite of the terminal condition
@@ -34,7 +32,8 @@ Implement different parts of a multi-functional program based on an initial inpu
 Tasks
 
 Accumulation - Accumulating a final result
-sum_until_0: Continuously read integers from standard input until you receive a zero. Print the sum of these integers.
+
+
 total_price: Continuously read pairs of integers from standard input, representing the quantity and price of items, until you receive the string "END". Print the total price of all items.
 Filtering - Selecting based on a criterion
 only_ed_or_ing: Continuously read strings from standard input until you encounter the word "STOP" (case insensitive and not included in the output). Print only those strings that end with "ed" or "ing" (case insensitive).
@@ -50,12 +49,23 @@ only_odd_lines: Continuously read lines from standard input until "END"(not incl
 
 '''
 
+# Note this prefix code is to verify that you are not using any for loops in this exercise. This won't affect any other functionality of the program.
+with open(__file__) as f:
+    content = f.read().split("# <eoi>")[2]
+if "for " in content:
+    print("You should not use for loop or the word for anywhere in this exercise")
+
+# This is the first line of the exercise
+print("tell which task you want to perform")
+task = input("sum_until_0,total_price,only_ed_or_ing,reverse_sum_palindrome,double_string,odd_char,only_even_squares,only_odd_lines")
+
+# sum_until_0: Continuously read integers from standard input until you receive a zero. Print the sum of these integers.
 if task == "sum_until_0":
     total = 0
     n = int(input())
-    while ...: # the terminal condition
-        ... # add n to the total
-        ... # take the next n form the input
+    while  n != 0: # the terminal condition
+        total = total + n # add n to the total
+        n= int(input()) # take the next n form the input
     print(total)
 
 elif task == "total_price":
