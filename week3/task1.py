@@ -34,8 +34,6 @@ Tasks
 Accumulation - Accumulating a final result
 
 
-Filtering - Selecting based on a criterion
-only_ed_or_ing: Continuously read strings from standard input until you encounter the word "STOP" (case insensitive and not included in the output). Print only those strings that end with "ed" or "ing" (case insensitive).
 reverse_sum_palindrome: Continuously read positive integers from standard input until you encounter a "-1"(not included in the output). Print only those integers for which the sum of the number and its reverse is a palindrome.
 Mapping - Applying the same operation to different items
 double_string: Continuously read lines from standard input until an empty line is encountered. Print each line repeated twice.
@@ -73,8 +71,18 @@ elif task == "total_price":
         quantity, price = int(quantity),int(price) # convert to ints
         total_price += quantity*price # accumulate the total price
     print(total_price)
+
+# Filtering - Selecting based on a criterion
+# only_ed_or_ing: Continuously read strings from standard input until you encounter the word "STOP" (case insensitive and not included in the output). Print only those strings that end with "ed" or "ing" (case insensitive).
+
 elif task == "only_ed_or_ing":
-    ...
+    while True:
+        n = input("enter your string :")
+        if "STOP" in n:
+            break
+        if n.endswith("ed") or n.endswith("ing"):
+            print(n)
+
 
 elif task == "reverse_sum_palindrome":
     ...
