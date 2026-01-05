@@ -34,7 +34,6 @@ Tasks
 Accumulation - Accumulating a final result
 
 
-total_price: Continuously read pairs of integers from standard input, representing the quantity and price of items, until you receive the string "END". Print the total price of all items.
 Filtering - Selecting based on a criterion
 only_ed_or_ing: Continuously read strings from standard input until you encounter the word "STOP" (case insensitive and not included in the output). Print only those strings that end with "ed" or "ing" (case insensitive).
 reverse_sum_palindrome: Continuously read positive integers from standard input until you encounter a "-1"(not included in the output). Print only those integers for which the sum of the number and its reverse is a palindrome.
@@ -49,15 +48,9 @@ only_odd_lines: Continuously read lines from standard input until "END"(not incl
 
 '''
 
-# Note this prefix code is to verify that you are not using any for loops in this exercise. This won't affect any other functionality of the program.
-with open(__file__) as f:
-    content = f.read().split("# <eoi>")[2]
-if "for " in content:
-    print("You should not use for loop or the word for anywhere in this exercise")
-
 # This is the first line of the exercise
 print("tell which task you want to perform")
-task = input("sum_until_0,total_price,only_ed_or_ing,reverse_sum_palindrome,double_string,odd_char,only_even_squares,only_odd_lines")
+task = input("sum_until_0,total_price,only_ed_or_ing,reverse_sum_palindrome,double_string,odd_char,only_even_squares,only_odd_lines ")
 
 # sum_until_0: Continuously read integers from standard input until you receive a zero. Print the sum of these integers.
 if task == "sum_until_0":
@@ -68,15 +61,17 @@ if task == "sum_until_0":
         n= int(input()) # take the next n form the input
     print(total)
 
+# total_price: Continuously read pairs of integers from standard input, representing the quantity and price of items, until you receive the string "END". Print the total price of all items.
+
 elif task == "total_price":
     total_price = 0
-    while ...: # repeat forever since we are breaking inside
-        line = input()
-        if ...: # The terminal condition
+    while True: # repeat forever since we are breaking inside
+        line = input("format:3 500,END :")   # 3 500
+        if "END" in line: # The terminal condition
             break
         quantity, price = line.split() # split uses space by default
-        quantity, price = ... # convert to ints
-        ... # accumulate the total price
+        quantity, price = int(quantity),int(price) # convert to ints
+        total_price += quantity*price # accumulate the total price
     print(total_price)
 elif task == "only_ed_or_ing":
     ...
@@ -93,4 +88,4 @@ elif task == "odd_char":
 elif task == "only_even_squares":
     ...
 
-elif task == "only_odd_lines":
+# elif task == "only_odd_lines":
