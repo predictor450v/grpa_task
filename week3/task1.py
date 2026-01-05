@@ -32,9 +32,6 @@ Implement different parts of a multi-functional program based on an initial inpu
 Tasks
 
 
-
-Mapping - Applying the same operation to different items
-double_string: Continuously read lines from standard input until an empty line is encountered. Print each line repeated twice.
 odd_char: Continuously read strings from standard input until you encounter a string ending with a "."(include that string with the "." in the output). Extract characters at odd positions (starting from 1) of each line, and print the results in a single line separated by spaces.
 Filter and Map - Applying an operation to selected items
 only_even_squares: Continuously read numbers from standard input until "NAN" is encountered. Print the square of each number only if it is even.
@@ -94,14 +91,16 @@ elif task == "reverse_sum_palindrome":
         if str(sum) == str(sum)[::-1]:
             print(f"{sum} is a palimdrome and the input is {a}")
 
-        
+# Mapping - Applying the same operation to different items
+# double_string: Continuously read lines from standard input until an empty line is encountered. Print each line repeated twice.
 
-
-
-    ...
 
 elif task == "double_string":
-    ...
+    while True:
+        line = input("enter your sentence")
+        if line =="":
+            break
+        print(line+line)
 
 elif task == "odd_char":
     ...
