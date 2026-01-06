@@ -1,38 +1,6 @@
 '''
 ✅ Important Note on while loop🔁:
 
-Use while only when the number of iterations is indefinite.
-If you can term the steps as do n times, do once for each item, etc. use for loop instead.
-If you can only term the steps as do until something happens. Like when user inputs 10.
-A bit of wisdom 📖 There are maily two ways in which while loops are used in the context of taking inputs until a terminal word.
-
-# method 1
-a = input()
-while a != terminal_word: # opposite of the terminal condition
-    # do something with a
-    a = input() # take the next a
-
-# method 2
-while True: # loop forever
-    a = input()
-    if a == terminal_word: # the terminal condition
-        break
-    # do something with a
-'''
-
-'''
-Problem Statement
-
-Problem type - Standard Input - Standard Output
-
-NOTE: None of this problem statements can be written using a for since the number of repetition is indefinite.
-
-Implement different parts of a multi-functional program based on an initial input value. Each part of the program will handle various tasks related to accumulation, filtering, mapping, and combinations of these operations. None of the tasks should use explicit loops for definite repetitions, and the program should handle indefinite inputs gracefully.
-
-Tasks
-
-
-
 '''
 
 # This is the first line of the exercise
@@ -130,6 +98,16 @@ elif task == "only_even_squares":
 
 
 # Filter and Accumulate - Accumulating a result with selected items
+
 # only_odd_lines: Continuously read lines from standard input until "END"(not included in the output) is encountered. Create a string by prepending only the odd lines (starting from 1) with a newline character in between, and print the result which will be the odd lines in reverse order.
 elif task == "only_odd_lines":
-    ...
+        lines = []
+        i = 1
+        while True:
+            line = input()
+            if line == "END":
+                break
+            if i % 2 != 0:
+                lines.append(line)
+        i += 1
+        print('\n'.join(reversed(lines)))
