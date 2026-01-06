@@ -32,11 +32,6 @@ Implement different parts of a multi-functional program based on an initial inpu
 Tasks
 
 
-Filter and Map - Applying an operation to selected items
-only_even_squares: Continuously read numbers from standard input until "NAN" is encountered. Print the square of each number only if it is even.
-Filter and Accumulate - Accumulating a result with selected items
-only_odd_lines: Continuously read lines from standard input until "END"(not included in the output) is encountered. Create a string by prepending only the odd lines (starting from 1) with a newline character in between, and print the result which will be the odd lines in reverse order.
-
 
 '''
 
@@ -122,8 +117,19 @@ elif task == "odd_char":
             i += 1
         print(''.join(result), end=' ')
 
-
+# Filter and Map - Applying an operation to selected items
+# only_even_squares: Continuously read numbers from standard input until "NAN" is encountered. Print the square of each number only if it is even.
 elif task == "only_even_squares":
-    ...
+     while True:
+        n = input("enter number and to end this \"NAN\"")
+        if n.lower() == "nan":
+            break
+        n = int(n)
+        if n % 2 == 0:
+            print(n ** 2)
 
-# elif task == "only_odd_lines":
+
+# Filter and Accumulate - Accumulating a result with selected items
+# only_odd_lines: Continuously read lines from standard input until "END"(not included in the output) is encountered. Create a string by prepending only the odd lines (starting from 1) with a newline character in between, and print the result which will be the odd lines in reverse order.
+elif task == "only_odd_lines":
+    ...
