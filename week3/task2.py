@@ -1,17 +1,3 @@
-'''it of Wisdom 📖 In context of general incremental definite loops the structure of while loop can be converted to a for loop using range. Refer this.
-
-# the while loop
-i = 0 # initialization
-while i<10: # condition
-    print(i) # body
-    i+=2 # update
-
-# same with for loop
-for i in range(0,10,2): # range combines initalization, temination and update.
-    print(i)
-Write a multi functional program that takes input task from standard input and does the corresponding taks accordingly. Note that the useage of for loop is not allowed in this exercise.
-
-'''
 
 '''no use of while loop
 your code should not use more than 7 for loops 
