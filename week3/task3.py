@@ -1,4 +1,4 @@
-'''reate a multi-functional program that performs different tasks based on the user input. The program should support the following tasks:
+'''create a multi-functional program that performs different tasks based on the user input. The program should support the following tasks:
 
 Permutation (permutation): Given a string s, print all the possible two-letter permutations(without repitition) of the letters in the string.
 Sorted Permutation (sorted_permutation): Given a string s, print all the possible two-letter permutations(without repetition) of the letters in the string where the first character comes before the second one in alphabetical order. The order in which the permutations are printed is same as the previous one (Type: Filtering).
@@ -15,4 +15,16 @@ Increment and Decrement (increment_and_decrement): Given a number n, print a pat
 1234321
 '''
 
-task = input()
+task = input(
+    "Choose a task:\n"
+    "1. permutation\n"
+    "2. sorted_permutation\n"
+    "3. repeat_the_repeat\n"
+    "4. repeat_incrementally\n"
+    "Enter your choice: "
+)
+
+
+if task == '1':
+    print("hi")
+    
