@@ -1,6 +1,6 @@
 '''it of Wisdom 📖 In context of general incremental definite loops the structure of while loop can be converted to a for loop using range. Refer this.
 
-# the wile loop
+# the while loop
 i = 0 # initialization
 while i<10: # condition
     print(i) # body
@@ -11,13 +11,6 @@ for i in range(0,10,2): # range combines initalization, temination and update.
     print(i)
 Write a multi functional program that takes input task from standard input and does the corresponding taks accordingly. Note that the useage of for loop is not allowed in this exercise.
 
-Part 1 - while loop to for loop
-factorial - print factorial of a given non-negative integer n (Type: Accumulation)
-Input - n:int
-even_numbers - Print the even numbers from 0 (including) till the given input number n(including) in multiple lines (Type: Just Iterating)
-Input - n:int
-power_sequence - Print the sequence 1, 2, 4, 8, 16, ... n terms in same line in multiple lines, where n is taken from the input(Type: Mapping)
-Input - n:int
 Part 2 - for loop With range
 sum_not_divisible - Print the sum of positive less that the given number n and not divisible by 4 and 5. (Type: Filtered Accumulation)
 Input - n:int
@@ -29,30 +22,46 @@ Input - s:str
 list_iter - Print the elements of a list l line by line in the format {element} - type: {type} where the element is the current element being iterated by the for loop and type is the type of the element. (Even though list are not covered in this week, this is included to demonstrate the similarity between iterating characters in a str and items in a list)
 Input - l:list
 '''
+
+'''no use of while loop
+your code should not use more than 7 for loops 
+assuming one for loop per problem
+This is the first line of the exercise'''
+# Part 1 - while loop to for loop
+# factorial - print factorial of a given non-negative integer n (Type: Accumulation)
+# Input - n:int
+# even_numbers - Print the even numbers from 0 (including) till the given input number n(including) in multiple lines (Type: Just Iterating)
+# Input - n:int
+# power_sequence - Print the sequence 1, 2, 4, 8, 16, ... n terms in same line in multiple lines, where n is taken from the input(Type: Mapping)
+# Input - n:int
 # Note this prefix code is to verify that you are not using any for loops in this exercise. This won't affect any other functionality of the program.
-with open(__file__) as f:
-    content = f.read().split("# <eoi>")[2]
-if "while " in content:
-    print("You should not use while loop or the word while anywhere in this exercise")
+task = input(
+    "Choose a task:\n"
+    "1. factorial\n"
+    "2. even_numbers\n"
+    "3. power_sequence\n"
+    "4. sum_not_divisible\n"
+    "5. from_k\n"
+    "6. string_iter\n"
+    "7. list_iter\n"
+    "Enter your choice: "
+)
 
-# your code should not use more than 7 for loops 
-# assuming one for loop per problem
-if content.count("for ")>7:
-    print("You should not use more than 7 for loops")
+if task == '1':
+    n = int(input("enter a non-negative integer for factorial: "))
 
-# This is the first line of the exercise
-task = input()
-# <eoi>
+    if n == 0 or n == 1:
+        result = 1
+        print(result)
+    elif n < 0:
+        print("Invalid")
+    else:
+        result = 1
+        for i in range(1, n + 1):
+            result *= i
+        print(result)
 
-if task == 'factorial':
-    n = int(input())
-    result = 1
-    i = 1
-    while i <=n:
-        result*=i
-        i+=1
-
-    print(result)
+    
 elif task == 'even_numbers':
     n = ...
     while i< n+1:
@@ -79,5 +88,12 @@ elif task == 'string_iter':
 elif task == 'list_iter':
     lst = eval(input()) # this will load the list from input
 
+'''if task == 'factorial':
+    n = int(input())
+    result = 1
+    i = 1
+    while i <=n:
+        result*=i
+        i+=1'''
 else:
     print("Invalid")
