@@ -27,8 +27,6 @@ Input - l:list
 your code should not use more than 7 for loops 
 assuming one for loop per problem
 This is the first line of the exercise'''
-# power_sequence - Print the sequence 1, 2, 4, 8, 16, ... n terms in same line in multiple lines, where n is taken from the input(Type: Mapping)
-# Input - n:int
 # Note this prefix code is to verify that you are not using any for loops in this exercise. This won't affect any other functionality of the program.
 task = input(
     "Choose a task:\n"
@@ -69,14 +67,17 @@ elif task == '2':
                                       #while i< n+1:
                                      # print(i)
                                      #  i+=2
+# power_sequence - Print the sequence 1, 2, 4, 8, 16, ... n terms in same line in multiple lines, where n is taken from the input(Type: Mapping)
+# Input - n:int
 
-elif task == 'power_sequence':
-    n = ...
-    result = 1
-    while i<n:
+elif task == '3':
+    n = int(input("enter number of terms in power sequence: "))
+      
+    for result in range(n):
+        
+        result = 2**result
         print(result)
-        result*=2
-        i+=1
+
 
 elif task == 'sum_not_divisible':
     ...
