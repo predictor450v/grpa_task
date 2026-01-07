@@ -1,6 +1,6 @@
 '''
 ✅ Important Note on while loop🔁:
-
+use of for loop not alllowed
 '''
 
 # This is the first line of the exercise
