@@ -11,11 +11,6 @@ for i in range(0,10,2): # range combines initalization, temination and update.
     print(i)
 Write a multi functional program that takes input task from standard input and does the corresponding taks accordingly. Note that the useage of for loop is not allowed in this exercise.
 
-part 3 - for loop with iterables.
-string_iter - Given a string s of digits print the numerical value of the digit multiplied by the previous digit. Assume the pevious digit for the first element to be 1.
-Input - s:str
-list_iter - Print the elements of a list l line by line in the format {element} - type: {type} where the element is the current element being iterated by the for loop and type is the type of the element. (Even though list are not covered in this week, this is included to demonstrate the similarity between iterating characters in a str and items in a list)
-Input - l:list
 '''
 
 '''no use of while loop
@@ -89,30 +84,44 @@ elif task == '4':
 
 # from_k - Starting from 100 and going in the decreasing order, print the reverse(digits reversed) of first n numbers starting from k which do not have the digit 5 and 9 and is odd number in multiple lines.
 # Input - n:int, k:int
-elif task == 'from_k':
+elif task == '5':
+   
    k = int(input("enter starting number k (<=100): "))
    n = int(input("enter number of terms to print n: "))
 
-count = 0  # Track how many numbers we've found
+   count = 0  # Track how many numbers we've found
 
-for i in range(k, 0, -1):
+   for i in range(k, 0, -1):
     # Check if i is odd AND doesn't contain 5 AND doesn't contain 9
-    if i % 2 != 0 and '5' not in str(i) and '9' not in str(i):
-        # Reverse the digits
-        reversed_num = int(str(i)[::-1])
-        print(reversed_num)
-        
-        count += 1
-        if count == n:  # Stop after finding n numbers
-            break
+        if i % 2 != 0 and '5' not in str(i) and '9' not in str(i):
+            # Reverse the digits
+            reversed_num = int(str(i)[::-1])
+            print(reversed_num)
+            
+            count += 1
+            if count == n:  # Stop after finding n numbers
+                break
+
+# part 3 - for loop with iterables.
+# string_iter - Given a string s of digits print the numerical value of the digit multiplied by the previous digit. Assume the pevious digit for the first element to be 1.
+# Input - s:str
+    
+elif task == '6':
+    s = input("Enter a string of digits: ")
+    prev_digit = 1
+
+    for char in s:
+        current_digit = int(char)
+        result = current_digit * prev_digit
+        print(result)
+        prev_digit = current_digit
 
 
-elif task == 'string_iter':
-    ...
-
-elif task == 'list_iter':
-    lst = eval(input()) # this will load the list from input
-
-
+# list_iter - Print the elements of a list l line by line in the format {element} - type: {type} where the element is the current element being iterated by the for loop and type is the type of the element. (Even though list are not covered in this week, this is included to demonstrate the similarity between iterating characters in a str and items in a list)
+# Input - l:list
+elif task == '7':
+    list = eval(input("provide list []")) # this will load the list from input
+    for element in list:
+        print(f"{element} - type: {type(element).__name__}")
 else:
     print("Invalid")
