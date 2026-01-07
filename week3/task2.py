@@ -27,11 +27,6 @@ Input - l:list
 your code should not use more than 7 for loops 
 assuming one for loop per problem
 This is the first line of the exercise'''
-# Part 1 - while loop to for loop
-# factorial - print factorial of a given non-negative integer n (Type: Accumulation)
-# Input - n:int
-# even_numbers - Print the even numbers from 0 (including) till the given input number n(including) in multiple lines (Type: Just Iterating)
-# Input - n:int
 # power_sequence - Print the sequence 1, 2, 4, 8, 16, ... n terms in same line in multiple lines, where n is taken from the input(Type: Mapping)
 # Input - n:int
 # Note this prefix code is to verify that you are not using any for loops in this exercise. This won't affect any other functionality of the program.
@@ -46,6 +41,9 @@ task = input(
     "7. list_iter\n"
     "Enter your choice: "
 )
+# Part 1 - while loop to for loop
+# factorial - print factorial of a given non-negative integer n (Type: Accumulation)
+# Input - n:int
 
 if task == '1':
     n = int(input("enter a non-negative integer for factorial: "))
@@ -60,13 +58,17 @@ if task == '1':
         for i in range(1, n + 1):
             result *= i
         print(result)
+# even_numbers - Print the even numbers from 0 (including) till the given input number n(including) in multiple lines (Type: Just Iterating)
+# Input - n:int
 
-    
-elif task == 'even_numbers':
-    n = ...
-    while i< n+1:
-        print(i)
-        i+=2
+elif task == '2':
+    n = int(input("enter a number to print even numbers till n: "))
+    for i in range(0,n):
+        if i%2==0:
+            print(i)
+                                      #while i< n+1:
+                                     # print(i)
+                                     #  i+=2
 
 elif task == 'power_sequence':
     n = ...
