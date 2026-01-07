@@ -90,7 +90,22 @@ elif task == '4':
 # from_k - Starting from 100 and going in the decreasing order, print the reverse(digits reversed) of first n numbers starting from k which do not have the digit 5 and 9 and is odd number in multiple lines.
 # Input - n:int, k:int
 elif task == 'from_k':
-    ...
+   k = int(input("enter starting number k (<=100): "))
+   n = int(input("enter number of terms to print n: "))
+
+count = 0  # Track how many numbers we've found
+
+for i in range(k, 0, -1):
+    # Check if i is odd AND doesn't contain 5 AND doesn't contain 9
+    if i % 2 != 0 and '5' not in str(i) and '9' not in str(i):
+        # Reverse the digits
+        reversed_num = int(str(i)[::-1])
+        print(reversed_num)
+        
+        count += 1
+        if count == n:  # Stop after finding n numbers
+            break
+
 
 elif task == 'string_iter':
     ...
