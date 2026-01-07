@@ -24,7 +24,13 @@ task = input(
     "Enter your choice: "
 )
 
-
+# permutation
 if task == '1':
-    print("hi")
-    
+    s = input("give a string to know the permutaion:")
+    for i in range(len(s)):
+        for j in range(len(s)):
+            if i != j:
+                print(s[i]+s[j])
+
+
+1
