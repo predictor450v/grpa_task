@@ -11,11 +11,6 @@ for i in range(0,10,2): # range combines initalization, temination and update.
     print(i)
 Write a multi functional program that takes input task from standard input and does the corresponding taks accordingly. Note that the useage of for loop is not allowed in this exercise.
 
-Part 2 - for loop With range
-sum_not_divisible - Print the sum of positive less that the given number n and not divisible by 4 and 5. (Type: Filtered Accumulation)
-Input - n:int
-from_k - Starting from 100 and going in the decreasing order, print the reverse(digits reversed) of first n numbers starting from k which do not have the digit 5 and 9 and is odd number in multiple lines.
-Input - n:int, k:int
 part 3 - for loop with iterables.
 string_iter - Given a string s of digits print the numerical value of the digit multiplied by the previous digit. Assume the pevious digit for the first element to be 1.
 Input - s:str
@@ -64,9 +59,7 @@ elif task == '2':
     for i in range(0,n):
         if i%2==0:
             print(i)
-                                      #while i< n+1:
-                                     # print(i)
-                                     #  i+=2
+                                     
 # power_sequence - Print the sequence 1, 2, 4, 8, 16, ... n terms in same line in multiple lines, where n is taken from the input(Type: Mapping)
 # Input - n:int
 
@@ -78,10 +71,24 @@ elif task == '3':
         result = 2**result
         print(result)
 
+# Part 2 - for loop With range
+# sum_not_divisible - Print the sum of positive less that the given number n and not divisible by 4 and 5. (Type: Filtered Accumulation)
+# Input - n:int
 
-elif task == 'sum_not_divisible':
+elif task == '4':
+    n = int(input("enter a number to find sum of numbers not divisible by 4 and 5: "))
+    if n <= 0:
+        print("Invalid")
+    if n > 0:
+        result = 0
+        for i in range(n):
+            if i % 4 != 0 and i % 5 != 0:
+                result += i
+        print(result)
     ...
 
+# from_k - Starting from 100 and going in the decreasing order, print the reverse(digits reversed) of first n numbers starting from k which do not have the digit 5 and 9 and is odd number in multiple lines.
+# Input - n:int, k:int
 elif task == 'from_k':
     ...
 
@@ -91,12 +98,6 @@ elif task == 'string_iter':
 elif task == 'list_iter':
     lst = eval(input()) # this will load the list from input
 
-'''if task == 'factorial':
-    n = int(input())
-    result = 1
-    i = 1
-    while i <=n:
-        result*=i
-        i+=1'''
+
 else:
     print("Invalid")
