@@ -31,10 +31,17 @@ if task == '1':
         for j in range(len(s)):
             if i != j:
                 print(s[i]+s[j])
-if task == "2":
+elif task == "2":
     s = input("give a string to know the permutaion:")
     for i in range(len(s)):
         for j in range(len(s)):
             if i != j and s[i]<s[j]:
                 print(s[i]+s[j])
     
+elif task == "3":
+    n = int(input("type your number"))
+    for i in range(1,n+1):
+        for j in range(1,n+1):
+            print(j,end="")
+        print()
+
