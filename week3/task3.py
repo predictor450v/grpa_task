@@ -21,6 +21,7 @@ task = input(
     "2. sorted_permutation\n"
     "3. repeat_the_repeat\n"
     "4. repeat_incrementally\n"
+    "5. increment_and_decrement\n"
     "Enter your choice: "
 )
 
@@ -45,3 +46,20 @@ elif task == "3":
             print(j,end="")
         print()
 
+elif task == "4":
+     n = int(input("numbers"))
+     for i in range (1,n+1):
+         for j in range(1,i+1):
+            print(j,end="")
+         print()
+             
+elif task == "5":
+    n = int(input("type your number"))
+    for i in range (1,n+1):
+         for j in range(1,i+1):
+            print(j,end="")
+         for j in range(i-1, 0, -1):
+            print(j, end="")
+         print()                 
+    
+          
