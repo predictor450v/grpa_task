@@ -31,6 +31,10 @@ if task == '1':
         for j in range(len(s)):
             if i != j:
                 print(s[i]+s[j])
-
-
-1
+if task == "2":
+    s = input("give a string to know the permutaion:")
+    for i in range(len(s)):
+        for j in range(len(s)):
+            if i != j and s[i]<s[j]:
+                print(s[i]+s[j])
+    
