@@ -60,6 +60,5 @@ elif task == "5":
             print(j,end="")
          for j in range(i-1, 0, -1):
             print(j, end="")
-         print()                 
-    
-          
+         print()
+                 
