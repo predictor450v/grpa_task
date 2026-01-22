@@ -29,16 +29,3 @@ hrs = (total_mins//60) # int: hint: think about floor division operator
 mins = int(total_mins%60) # int
 print("hours",hrs)
 print("min",mins)
-
-
-'''NOTE: In this type of questions you should not take input or print anything unless your are explicitly asked to. Assign the result of the required computation to the correct variable name as it will be evaluated for type and value by the evaluator.
-
-The input variables will be assigned by the evaluator based on the test cases.
-
-The grey part before the white part (if any) in the code is the prefix code. The grey part after the white part (if any) is the suffix code which are not editable. Usually they will be the part of code but in this type of questions it will be removed by the evaluator.
-
-The Three dots (...) called as Ellipsis in python are like placeholders, replace them with your answer.
-
-The inputs on the code blocks are just sample inputs they won't be evaluated in the actual testcases.
-
-Each testcase will have its own set of testcases defined as variables. The check function in the testcases is in the hidden evaluation code that checks the value and type of the variable.'''
