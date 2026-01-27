@@ -27,7 +27,9 @@ def swap_halves(items):
 print(swap_halves([1,2,3,4,5,6]))
 
 def swap_at_index(items,k):
-    ...
+    return items[k+1:] + items[:k+1]
+print(swap_at_index(([1,2,3,4,5,6]),1))
+
 
 def rotate_k(items,k=1):
     ...
