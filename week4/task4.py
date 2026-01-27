@@ -20,7 +20,11 @@ Output: None (the list should be modified in place).
 
 
 def swap_halves(items):
-    ...
+    a = len(items) // 2
+    sawp = items[a:] + items[0:a]
+    return sawp
+# (1,2,3,4,5,6) ==> (4,5,6,1,2,3)
+print(swap_halves([1,2,3,4,5,6]))
 
 def swap_at_index(items,k):
     ...
