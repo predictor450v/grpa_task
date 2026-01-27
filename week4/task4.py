@@ -36,8 +36,15 @@ def rotate_k(items, k=1):
     return items[-k:] + items[:-k]
 print(rotate_k(([1,2,3,4,5,6]),4))
 
-def first_and_last_index(items,elem):
-    ...
+def first_and_last_index(items, elem):
+    first_index = items.index(elem)
+    last_index = len(items) - 1 - items[::-1].index(elem)
+    return (first_index, last_index)
+print(first_and_last_index(([1,2,3,1,5,6]),1))
 
 def reverse_first_and_last_halves(items):
-    ...
+    mid = len(items) // 2
+    items[:mid] = reversed(items[:mid])
+    items[mid:] = reversed(items[mid:])
+    return items
+print(reverse_first_and_last_halves([1,2,3,4,5,6,7,8]))
