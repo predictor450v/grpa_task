@@ -31,8 +31,10 @@ def swap_at_index(items,k):
 print(swap_at_index(([1,2,3,4,5,6]),1))
 
 
-def rotate_k(items,k=1):
-    ...
+def rotate_k(items, k=1):
+    k = k % len(items)  # to handle k greater than the length of the items
+    return items[-k:] + items[:-k]
+print(rotate_k(([1,2,3,4,5,6]),4))
 
 def first_and_last_index(items,elem):
     ...
