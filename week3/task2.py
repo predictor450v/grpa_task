@@ -19,6 +19,7 @@ task = input(
 # factorial - print factorial of a given non-negative integer n (Type: Accumulation)
 # Input - n:int
 
+
 if task == '1':
     n = int(input("enter a non-negative integer for factorial: "))
 
