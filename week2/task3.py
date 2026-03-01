@@ -83,3 +83,4 @@ if period == "AM":
    
 else:
     time_of_day = "Afternoon" if hour==12 else "Afternoon" if 1 <= hour <= 4 else "Evening" if 5 <= hour <= 11 else "Invalid"
+    
