@@ -30,6 +30,7 @@ elif task == "total_price":
         total_price += quantity*price # accumulate the total price
     print(total_price)
 
+
 # Filtering - Selecting based on a criterion
 # only_ed_or_ing: Continuously read strings from standard input until you encounter the word "STOP" (case insensitive and not included in the output). Print only those strings that end with "ed" or "ing" (case insensitive).
 
