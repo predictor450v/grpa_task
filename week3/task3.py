@@ -15,6 +15,7 @@ Increment and Decrement (increment_and_decrement): Given a number n, print a pat
 1234321
 '''
 
+
 task = input(
     "Choose a task:\n"
     "1. permutation\n"
