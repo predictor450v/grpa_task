@@ -67,3 +67,4 @@ if is_card_payment:  # service charge for card payments
     total_cost += service_charge
 
 print(f"{total_cost:.02f}")
+
